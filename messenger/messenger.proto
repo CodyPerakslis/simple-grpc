@@ -8,15 +8,9 @@ service Messenger {
     rpc SendMessage (Message) returns (Ack);
 }
 
-message User {
-    int32 uid = 1;
-    string name = 2;
-}
 
 message Message {
     string data = 1;
-    User sender = 2;
-    User reciever = 3;
 }
 
 message Ack {
